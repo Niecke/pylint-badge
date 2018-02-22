@@ -1,38 +1,33 @@
 """
-pylint-server
+pylint-badge
 ----
 
-A small Flask application to keep keep track of pylint reports and ratings
-on a per-repository basis.
+A small python module to generate pylint badges directly from command line
 """
 from setuptools import setup
 
 
 setup(
-    name='pylint-server',
+    name='pylint-badge',
     version='0.1',
-    url='https://github.com/drivet/pylint-server/',
+    url='https://github.com/lucasventurasc/pylint-badge/',
     license='MIT',
-    author='Desmond Rivet',
-    author_email='desmond.rivet@gmail.com',
-    description='A Flask application to keep keep track of pylint information',
+    author='Lucas Ventura',
+    author_email='lnventura@hotmail.com',
+    description='A python module to generate pylint badges instantly',
     long_description=__doc__,
-    py_modules=['pylint-server'],
+    py_modules=['pylint_badge'],
     zip_safe=False,
     include_package_data=True,
     platforms='any',
     install_requires=[
-        'Flask',
-        'TravisPy'
     ],
     classifiers=[
-        'Environment :: Web Environment',
+        'Environment :: Local',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
-        'Topic :: Internet :: WWW/HTTP :: WSGI :: Application',
-        'Topic :: Software Development :: Version Control',
-    ],
+        'Topic :: Software Development :: Version Control'
+    ]
 )
