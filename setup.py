@@ -16,7 +16,7 @@ setup(
     author_email='lnventura@hotmail.com',
     description='A python module to generate pylint badges instantly',
     long_description=__doc__,
-    py_modules=['pylint-badge'],
+    py_modules=['pylint_badge'],
     zip_safe=False,
     include_package_data=True,
     platforms='any',
