@@ -4,6 +4,7 @@ import os
 import re
 import logging
 
+from os import path
 
 LOG_LEVEL = logging.INFO
 OUTPUT_FOLDER = '/tmp/pylint-server'
@@ -48,7 +49,7 @@ def generate_from_rate(rate):
 
 def generate(match):
     (rating, colour) = get_colour(match)
-    output_badge = os.path.join(os.path.dirname(__file__), 'rating.svg')
+    output_badge = os.path.join(path.realpath('.'), 'rating.svg')
     save_file(output_badge, BADGE_TEMPLATE.format(rating, colour))
 
 
