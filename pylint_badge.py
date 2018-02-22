@@ -38,11 +38,15 @@ BADGE_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="85" height="2
 def generate_from_report():
     report = open("pylint.html").read()
     match = re.search("Your code has been rated at (.+?)/10", report)
-    generate_from_rate(match)
+    generate(match)
 
 
 def generate_from_rate(rate):
     match = re.search("Your code has been rated at (.+?)/10", "Your code has been rated at {}/10".format(rate))
+    generate(match)
+
+
+def generate(match):
     (rating, colour) = get_colour(match)
     output_badge = os.path.join(os.path.dirname(__file__), 'rating.svg')
     save_file(output_badge, BADGE_TEMPLATE.format(rating, colour))

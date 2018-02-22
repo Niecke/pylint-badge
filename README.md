@@ -19,8 +19,7 @@ Copy pylint-badge project folder to your project root folder and run
 python3 -c "from pylint-badge.pylint_badge import generate_from_report; generate_from_report()"
 ```
 
-Add this line to your requirements.txt to install as a module
-git+https://github.com/lucasventurasc/pylint-badge
+python pip install git+https://github.com/lucasventurasc/pylint-badge
 
 In your virtualenv you should can access by pylint-badge keyword
 
