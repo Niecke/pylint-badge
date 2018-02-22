@@ -23,6 +23,6 @@ pylint --output-format=html >> pylint.html
 ```
 python3 -c "from pylint_badge import generate_from_report; generate_from_report()"
 ```
-In folder that you was run the command will have a rating.svg
+In folder that you was run the command, will have a badge with name rating.svg
 
 Put a badge on your README accordingly.
