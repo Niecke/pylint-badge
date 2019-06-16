@@ -38,7 +38,7 @@ BADGE_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="85" height="2
 
 def generate_from_report():
     report = open("pylint.html").read()
-    match = re.search("Your code has been rated at (.+?)/10", report)
+    match = re.search(r"Your code has been rated at (.+?)\/10", report)
     generate(match)
 
 
